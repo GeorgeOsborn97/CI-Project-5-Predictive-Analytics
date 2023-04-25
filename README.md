@@ -1,108 +1,112 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![]()
 
-Welcome GeorgeOsborn97,
+# House Price Predictions
+## A Predictive Analytics Project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This project is the final milestone project that has been completed during my time studying at Code Institute. I decided to take Predictive Analytics as my specialistation and that forms the subject of this project. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The goal of this project was to use Machine Learning to produce a model that can predict the potential sales price of houses to a reliable degree of accuracy. Then to present the data, steps taking in producing the model, the working model itself as well as the any evaluation conducted and my own findings on the the data. All this information will then be presented in a user friendly manner utilising a simple dashboard produced using streamlit. 
 
-## Gitpod Reminders
+(additional info?)
+___
+mock up image
+___
+## Contents
+1. [The Business Problem](#the-business-problem)
+2. [Business Case](#business-case)
+3. [business-requirements](#business-requirements)
+    * [business-requirement-1](#business-requirement-1)
+    * [business-requirement-2](#business-requirement-2)
+4. [The Data](#the-data)
+    * [Data Collection](#data-collection)
+        * [What is Kaggle?](#what-is-kaggle)
+    * [Data Content](#data-content)
+    * [Data Table](#data-table)
+___
+## The Business Problem
+A fictional individual, Lydia Doe, has received an inheritance from a deceased great-grandfather. Included in the inheritance are four houses located in Ames, Iowa, USA. Although Lydia has an excellent understanding of property prices in her home country of Belgium, she fears that basing her estimates for property worth on her current knowledge of the Iowan market might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Lydia needs help if she is to maximize the sales price for the inherited properties. She decides to ask a Data Practitioner for help. Her reasons for doing so are:
 
-`python3 -m http.server`
+* She doesn't know the worth of the properties and does not want to take the risk of inaccurate pricing estimation, since there is potentially a reasonable amount of money to be made or lost when selling the four properties.
+* She is also interested in predicting the sale price from any house in Ames, Iowa in case of future property ownership in that area.
 
-A blue button should appear to click: _Make Public_,
+From searching the Internet, Lydia found a public dataset with house prices for Ames, Iowa, and will provide you with that. You will build a Data Web App to predict the sales price from the four houses based on the house attributes. The business requirements are:
 
-Another blue button should appear to click: _Open Browser_.
+* The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
+* The client is interested in predicting the house sales price from her four inherited houses, and any other house in Ames, Iowa.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Deliver a dashboard that meets the above requirements.
+## Business Case
+1. What are the business requirements?
+    * The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+    * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+2. Is there any business requirement that can be answered with conventional data analysis? 
+    * Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+3. Does the client need a dashboard or an API endpoint?
+    * The client needs a dashboard
+4. What does the client consider as a successful project outcome? 
+    * A study showing the most relevant variables correlated to sale price. 
+    * Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+5. Can you break down the project into Epics and User Stories? 
+    * Information gathering and data collection.
+    * Data visualization, cleaning, and preparation.
+    * Model training, optimization and validation
+    * Dashboard planning, designing, and development.
+    * Dashboard deployment and release.
+6. Ethical or Privacy concerns?
+    * No. The client found a public dataset.
+7. Does the data suggest a particular model?
+    * The data suggests a regressor where the target is the sale price.
+8. What are the model's inputs and intended outputs?
+    * The inputs are house attribute information and the output is the predicted sale price.
+9. What are the criteria for the performance goal of the predictions?
+    * We agreed with the client an R2 score of at least 0.75 on the train set as well as on the test set.
+10. How will the client benefit? 
+    * The client will maximize the sales price for the inherited properties.
 
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Business Requirements
+### Business Requirement 1:
+  * You may perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
+  * You have to visualize these variables against the sale price, so you can summarize the insights.
+### Business Requirement 2:
+  * You may deliver an ML system that is capable of reliably predicting the summed sales price of the 4 inherited houses.
+  * You may use either conventional ML or Neural Networks to map the relationships between the features and the target.
+  * You may consider changing the ML task from Regression to Classification if you find a valid rationale for that.
+  * In case you are modelling using conventional ML, with packages like scikit-learn for example, you may conduct an extensive hyperparameter optimization for a given algorithm. You can refer back to the Scikit-learn lesson, Unit Notebook 6: Cross-Validation Search Part 2. At the end of the notebook, you will find a list of hyperparameter options and values to start with, for the family of algorithms we covered in the course.
+___
+## The Data
+### Data Collection
+The data used in this project was sourced from [Kaggle](https://www.kaggle.com/)
+#### What is Kaggle?
+* Kaggle is an online community based platform that promotes collaberation between data scientists, provides a verity of tools to aid new and experinaces deelopers alike, as well as a blistering amount of public open datasets that can be freely applied to your own projects. One of these datasets is what we have utilised to train our model in this project.
+### Data Content
+* Data Explanation to be added later
+___
+### Data Table
+|Variable|Meaning|Units|
+|---|---|---|
+|1stFlrSF|First Floor square feet|334 - 4692 - (Min - Max > Sq. ft.)|
+|2ndFlrSF|Second floor square feet|0 - 2065 - (Min - Max > Sq. ft.)|
+|BedroomAbvGr|Bedrooms above grade (does NOT include basement bedrooms)|0 - 8 - (Min - Max > Bedrooms)|
+|BsmtExposure|Refers to walkout or garden level walls|Gd: Good Exposure; Av: Average Exposure; Mn: Minimum Exposure; No: No Exposure; None: No Basement|
+|BsmtFinType1|Rating of basement finished area|GLQ: Good Living Quarters; ALQ: Average Living Quarters; BLQ: Below Average Living Quarters; Rec: Average Rec Room; LwQ: Low Quality; Unf: Unfinished; None: No Basement|
+|BsmtFinSF1|Type 1 finished square feet|0 - 5644 - (Min - Max > Sq. ft.)|
+|BsmtUnfSF|Unfinished square feet of basement area|0 - 2336 - (Min - Max > Sq. ft.)|
+|TotalBsmtSF|Total square feet of basement area|0 - 6110 - (Min - Max > Sq. ft.)|
+|GarageArea|Size of garage in square feet|0 - 1418 - (Min - Max > Sq. ft.)|
+|GarageFinish|Interior finish of the garage|Fin: Finished; RFn: Rough Finished; Unf: Unfinished; None: No Garage|
+|GarageYrBlt|Year garage was built|1900 - 2010 - (Min - Max > Year Built)|
+|GrLivArea|Above grade (ground) living area square feet|334 - 5642 - (Min - Max > Sq. ft.)|
+|KitchenQual|Kitchen quality|Ex: Excellent; Gd: Good; TA: Typical/Average; Fa: Fair; Po: Poor|
+|LotArea| Lot size in square feet|1300 - 215245 - (Min - Max > Sq. ft.)|
+|LotFrontage| Linear feet of street connected to property|21 - 313 - (Min - Max > Lin. ft.)|
+|MasVnrArea|Masonry veneer area in square feet|0 - 1600 - (Min - Max > Sq. ft.)|
+|EnclosedPorch|Enclosed porch area in square feet|0 - 286 - (Min - Max > Sq. ft.)|
+|OpenPorchSF|Open porch area in square feet|0 - 547 - (Min - Max > Sq. ft.)|
+|OverallCond|Rates the overall condition of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
+|OverallQual|Rates the overall material and finish of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
+|WoodDeckSF|Wood deck area in square feet|0 - 736 - (Min - Max > Sq. ft.)|
+|YearBuilt|Original construction date|1872 - 2010 - (Min - Max > Year Built)|
+|YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|1950 - 2010 - (Min - Max > Remodel Year)|
+|SalePrice|Sale Price|34.900 - 755.000 - (Min - Max > Sale price in $)|
