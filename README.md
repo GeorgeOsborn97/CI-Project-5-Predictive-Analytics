@@ -113,3 +113,14 @@ ___
 |YearBuilt|Original construction date|1872 - 2010 - (Min - Max > Year Built)|
 |YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|1950 - 2010 - (Min - Max > Remodel Year)|
 |SalePrice|Sale Price|34.900 - 755.000 - (Min - Max > Sale price in $)|
+___
+## The Hypothesis (based on the Data collected).
+1. A house with a 'Larger' surface area will have a higher Sales Price.
+2. A house with better Overall Quality will have a higher Sales Price.
+3. A more recently built house house of equivalint square footage and quality then an older house will have a a higher Sales Price.
+4. A house with a more recent re model date will have a higher Sales Price.
+    * Additionally a recent remodel of an older house will have a higher Sales Price of an equivelent square footage and quality house that was built in the same time as the remodel, and has not undergone any remodelling.
+5. Additional hypothesis to be added later to consider if i have time.
+
+### How to test the Hypothesis.
+Correlation studies utilising Pearson and Spearmen tests can be used in order to test all our above hypothesis. PPS (Predictive Power Score), may also be used to test the relationships between the features in our data and test the hypothesis presented above.
