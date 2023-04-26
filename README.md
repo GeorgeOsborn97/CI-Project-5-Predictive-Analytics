@@ -81,7 +81,10 @@ The data used in this project was sourced from [Kaggle](https://www.kaggle.com/)
 #### What is Kaggle?
 * Kaggle is an online community based platform that promotes collaberation between data scientists, provides a verity of tools to aid new and experinaces deelopers alike, as well as a blistering amount of public open datasets that can be freely applied to your own projects. One of these datasets is what we have utilised to train our model in this project.
 ### Data Content
-* Data Explanation to be added later
+* The Dataset used in this project contains data on housing built between 1872 and 2010 in the town of Ames, Iowa in the USA. 
+* The link to this data was provided by Code Institute in the Assesment Handbook to aid in the production of this project. And was downloaded from Kaggle.
+
+The Dataset used in this project to train the model contains 23 columns, and 1460 rows, a summary of the variables, meanings and units for each of these columns can be seen in the table below.
 ___
 ### Data Table
 |Variable|Meaning|Units|
