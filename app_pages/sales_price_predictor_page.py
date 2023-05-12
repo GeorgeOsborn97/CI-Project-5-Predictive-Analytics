@@ -48,7 +48,7 @@ def sales_price_predictor_page_body():
     total_price = "%.2f" % total_price
     st.success(
         f"**The total predicted Sales Price, if all properties were to be sold is: "
-        f":blue[\u0024{total_price}].**"
+        f"\u0024{total_price}.**"
         )
 ##################
     check_var = False
@@ -95,11 +95,11 @@ def predict_inherited_house_price(prediction_pipeline, price_features):
         X_live = inherited.iloc[[x]]
         price_prediction = predict_sale_price(X_live, price_features, prediction_pipeline)
         price_prediction = "%.2f" % price_prediction
-        if st.checkbox(f"Check the box to view the data and individual Sales Price of property {x+1}", key=u_key,):
+        if st.checkbox(f"Check the box to view the data and individual Sales Price of property {x+1}"):  # key=u_key,
             st.write(X_live)
             statement = (
                 f"* The predicted Sales Price for this property: "
-                f":blue[\u0024{price_prediction}]"
+                f"\u0024{price_prediction}"
             )
             st.success(statement)
         total_price += float(price_prediction)
@@ -126,8 +126,8 @@ def DrawInputsWidgets():
     df = load_clean_data("clean")
     percentageMin, percentageMax = 0.2, 2.0
 
-    col1, col2, col3 = st.columns(3)
-    col4, col5, col6 = st.columns(3)
+    col1, col2, col3 = st.beta_columns(3)
+    col4, col5, col6 = st.beta_columns(3)
 
     X_live = pd.DataFrame([], index=[0])
 
