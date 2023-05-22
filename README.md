@@ -174,6 +174,10 @@ ___
         * Where was it applied? This project was deployed to heroku, a step by step guide to the deployment can be seen at the end of this document. 
 
 ### Agile Development
+* Alongside the Crisp-DM workflow that was followed through out this project I aslo kept the principles of Agile Development in order to help maximise my time and work as effciently as possible. The Kanban board which was made in GitHub Projects was pivitol in guuiding the development of this project.
+* A link to the GitHub project can be seen [here](https://github.com/users/GeorgeOsborn97/projects/5/views/1)
+![kanban](/static/images/kanban.png)
+
 ___
 ## Answering Business Requirement 1
 ## Answering Business Requirement 2
