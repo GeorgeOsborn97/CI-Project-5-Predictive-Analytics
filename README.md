@@ -289,17 +289,33 @@ ___
 
 ___
 ## Testing
-* 
+* As the dashboard is being produced by streamlit we only need to conduct basic testing on our features to ensure everything is working as expected.
+
+|Feature being tested|How was it tested|Expected outcome|Actual Outcome|
+|---|---|---|---|
+|Navigation menu|Each of the five navigation buttons were clicked one at a time.|Each naviagtion button should take the user to the page they selected.|Each button successfully bought me to the correct page.|
+|Inspect the Raw data|The button to reveal the raw data was clicked twice, once to open the raw data table, and again to close it.|The first click of the button opens the raw data in a table showing the first 10 rows, the second click closes it.|The table opened and closed as expected.|
+|Reveal Correlation plots|The button to reveal the correlation plots was clicked twice, once to reveal the plots, and again to remove them.|The first click of the button reveals all 6 correlation plots, the second click closes them all.|The plots came and went as expected.|
+|Price predictions of inherited houses|All four of the buttons that reveal the individual housing data and the predicted price were clicked twice, once to reveal the data and once to remove them.|The first click should reveal a single row of data relating to that house, as well as the sales price prediction for that house. The second click should remove both these bits of information.|The first click did reveal all expected information and the second successfully removed them.|
+|Invalid inputs of price prediction widgets|text was typed into every numerical variable, incoreect text and numbers were typed into the drop down menu for KitchenQual.|Numerical inputs should not accept anything that is not a number, KitchenQual should not accept an input that is not in the drop down menu.|When an invalid input was placed in any widget it would return to its default value.|
+|Price prediction of manual input|The 'Run Predictive analysis button was clicked with different input data being applied.|The button should reveal a Sales Price prediction that is displayed to the user.|Succesfully displayed a predicted Sales Price to the user.|
 
 
 ### Known Bugs
-* 
+* No known bugs exist in the dashboard.
 ___
 ## Future Additions
 * 
 ___
 ## Deployment
-* 
+* The deployment for this project was hindered by a mistake in the requirements.txt file, A wrong streamlit version was originally installed and when it came to deploying the dashboard this caused some errors. This was resolved in changing the requirements by uninstalling all packages and reisntalling only those that were required and of the correct verion. A note of this can be found in the commits in the repo. Below is a simple step guide to how the project was deployed to heroku. 
+1. Log in to Heroku and create an App
+2. Log into Heroku CLI using the command "heroku login -i" and enter your login information.
+3. Run the command git init to re-initialise the Git repository
+4. Run the command "heroku git:remote -a YOUR_APP_NAME" to connect the workspace and your Heroku app.
+5. Set the app's stack to heroku-20 using the command "heroku stack:set heroku-20" this is needed to make the app compatible with Python 3.8.12.
+6. Use git push heroku main to deploy the application to Heroku or naviagte to the Deploy tab in the heroku dashboard and manually deploy.
+
 ___
 ## Credits and Acknowledgments
 * 
