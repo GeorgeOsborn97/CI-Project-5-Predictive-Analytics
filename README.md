@@ -78,13 +78,16 @@ Deliver a dashboard that meets the above requirements.
 
 ## Business Requirements
 ### Business Requirement 1:
-  * You may perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
-  * You have to visualize these variables against the sale price, so you can summarize the insights.
+  1. You may perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
+  2. You have to visualize these variables against the sale price, so you can summarize the insights.
+  * The work done to answer this business requiremnt acn be seen in the DataCollection and DataAnalysis jupyter notebooks. In this section of the Readme I shall publish the results and summerise the findings.
+
 ### Business Requirement 2:
-  * You may deliver an ML system that is capable of reliably predicting the summed sales price of the 4 inherited houses.
-  * You may use either conventional ML or Neural Networks to map the relationships between the features and the target.
-  * You may consider changing the ML task from Regression to Classification if you find a valid rationale for that.
-  * In case you are modelling using conventional ML, with packages like scikit-learn for example, you may conduct an extensive hyperparameter optimization for a given algorithm. You can refer back to the Scikit-learn lesson, Unit Notebook 6: Cross-Validation Search Part 2. At the end of the notebook, you will find a list of hyperparameter options and values to start with, for the family of algorithms we covered in the course.
+  1. You may deliver an ML system that is capable of reliably predicting the summed sales price of the 4 inherited houses.
+  2. You may use either conventional ML or Neural Networks to map the relationships between the features and the target.
+  3. You may consider changing the ML task from Regression to Classification if you find a valid rationale for that.
+  4. In case you are modelling using conventional ML, with packages like scikit-learn for example, you may conduct an extensive hyperparameter optimization for a given algorithm.
+  * The work done to answer this business requiremnt can be seen in the DataCleaning, FeatureEnginnering and the Model and Evaluation jupyter notebooks. In this section of the Readme I shall publish the results and summerise the findings.
 ___
 ## The Data
 ### Data Collection
@@ -180,17 +183,115 @@ ___
 
 ___
 ## Answering Business Requirement 1
+* To reitterate the first requirement was:
+    * Perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
+    * Visualize these variables against the sale price, so you can summarize the insights.
+* Two correlation studies were conducted as part of the DataAnalysis notebook. Both Pearson and Spearmen correlation tests were performed on the data to view the correlation of the other variables to the Sales Price. If you would like to read up on these coreelation tests you may follow the link [here](https://www.analyticsvidhya.com/blog/2021/03/comparison-of-pearson-and-spearman-correlation-coefficients/#:~:text=Pearson%20correlation%3A%20Pearson%20correlation%20evaluates,rather%20than%20the%20raw%20data.) 
+* Concluding these tests we found these results: 
+    1. A house with a high sales price typically has a large 1st floor square footage.
+    2. A house with a high sales price typically has a large garage square footage.
+    3. A house with a high sales price typically has a large above grade (ground) living area square footage.
+    4. A house with a high sales price typically has a high overall quality.
+    5. A house with a high sales price typically has a large basement square footage.
+    6. A house with a high sales price typically was built more recently.
+* To answer the second part of the business requirement we plotted these 6 varibales agaisnt sales price.
+
+|Variable|Graph|
+|---|---|
+|1stFlrSf against SalePrice|![corr_1](/static/images/corr_1.png)|
+|GarageArea against SalePrice|![corr_2](/static/images/corr_2.png)|
+|GrLivArea against SalePrice|![corr_3](/static/images/corr_3.png)|
+|OverallQual against SalePrice|![corr_4](/static/images/corr_4.png)|
+|TotalBsmtSF against SalePrice|![corr_5](/static/images/corr_5.png)|
+|YearBuilt against SalePrice|![corr_6](/static/images/corr_6.png)|
+
 ## Answering Business Requirement 2
-## Conclusions
+* To reitterate the second requirement was:
+    * Deliver an ML system that is capable of reliably predicting the summed sales price of the 4 inherited houses.
+    * Use either conventional ML or Neural Networks to map the relationships between the features and the target.
+    * Consider changing the ML task from Regression to Classification if you find a valid rationale for that.
+    * In case you are modelling using conventional ML, with packages like scikit-learn for example, you may conduct an extensive hyperparameter optimization for a given algorithm.
+* In preparation to answer this business requirement the data had to be cleaned amd engineered, the process of which can be found in the DataCleaning and FeatureEngineering notebooks. Having completed this we can move on the answering the requirement. 
+* The specific code that was ran in order to answer the requirement can be found in the Model and Evaluation notebook.
+* In the end we found that the most optimal model was as an ExtraTreesRegressor with max_depth=32 and n_estimators = 150 applied to the features that were flagged as high importance. The full Pipeline and work is viewable in the notebook if you would like to see the steps that lead to that conclusion.
+* Utilising this model we were able to achieve an r2_score of 1.0 on the train set and 0.847 on the test set. The Business Case defined that an r2_score > 0.75 was required.
+* You may see the plots below that help visualise the results of the model on the train and test sets as well as the results of our model.
+* Train Set
+    * R2 Score: 1.0
+    * Mean Absolute Error: 138.289
+    * Mean Squared Error: 947914.048
+    * Root Mean Square Error: 973.609
+* Test Set
+    * R2 Score: 0.847
+    * Mean Absolute Error: 21292.305
+    * Mean Squared Error: 1053381483.713
+    * Root Mean Square Error: 32455.839
+
+![evaluation plots](/outputs/ml_pipeline/predict_saleprice/v1/regression_evaluation_plots.png)   
+
+* Finally we want to prove our model can predict on unseen data. By visiting the link at the top of this page to the deployed site you will be able to try this out for yourself. However for clarity, below are two images, showing to predictions. The first on the first property presented in teh Business Case, and the second on random unseen data created by myself. As we can see the model is able to predict a potentail sales price for the properties.
+![prediction 1](/static/images/predict_1.png)
+![prediction 2](/static/images/predict_2.png)
+
 ___
 ## Dashboard Design
+* It was agreed in the Business Case that the ideal end point of this project was a interactive dashboard that would display the findings and results.
+* In designing the dashboard it became clear that five pages would be necessery to show all relevent and required information, below is a break down of all these pages.
+
+1. Page 1: Quick Project Summary.
+    * Whats the purpose? To provide the reader with the information needed to understand the purpose of the dashboard and what it aims to achieve.
+    * How does it achieve this? The summary page has a total of 3 sections that help to acheive the above purpose.
+        * The Business Problem.
+        * The Business Requirements.
+        * The Data.
+    * Each of these sections has a clear definition that tells the reader only what they need to know. The first two sections help outline the purpose / goal of the dashboard itself, whilst the final section is there to introduce the reader the data set so that they may gain a better understanding of it which will help them to understand teh content of future pages.
+
+2. Page 2: Housing Sales Price Study.
+    * Whats the purpose? Answering the first business requirement.
+    * How does it achieve this? The sales price study page has five distinct sections within it.
+        * The business requirement.
+        * Raw data.
+        * A simple description of the correlation studies that were performed.
+        * The singled out variables.
+        * The study results.
+    * The first section is self explanitory, it is simply there to remind the reader of the first requiremnt that will be being answered on the page.
+    * The second section introduces the dataset, where as the previous secition described the variables, the reader now has chance to look through the actual data and gain a better understanding of it.
+    * The third section introduces the reader to the studies that were performed, not much detail is provided however a link is provieded if they wish to do further study on how these correlations are calculated and what they show.
+    * The forth section shows the result of an intial investigation into the correlation, it shows the 6 variable sthat were isolated as the most correlated with sales price.
+    * Finally the fith section is the visualisation taht was required in the requiremnt. each correlation plot contains a scatter and box plot that can be investigated utilising plotly. 
+
+3. Page 3: Sales Price Predictor.
+    * Whats the purpose? Answering the second business requirement.
+    * How does it achieve this? This page is split into three sections that help to acheive the goal of the page.
+        * The first section again is self explanitory, it is simply there to remind the reader of the second requiremnt that will be being answered on the page.
+        * The second section answers the first part of the requirement, the client in this respevct can go down the tick boxes and check the predicted sales price for each of her inherited houses.
+        * The third section answers the second part of the requirement. The 6 key features are presented and are able to be adjusted to represent deifferent potential houses in order to get a prospective sales price for any house in Armes Iowa.
+
+4. Page 4: Project Hypothesis and Validation.
+    * Whats the purpose? Provide the reader with an insight into the assumptions made in regards to the business problem, allowing them to understand our thought process and how it influenced the work done when we attempted to validate these assumptions.
+    * How does it achieve this? This page contains 2 sections but they may be considered as a single section.
+        * This page simply outlines the assumptions made after the initial analysis of the data, it then goes on to say how these assumptions will be validated.
+
+5. Page 5: ML: Housing Sales Price Prediction.
+    * Whats the purpose? Provide a more in depth look at how the model is able to predict on sales price. For the more computer savy reader they should be able to understand the methodology and the results.
+    * How does it achieve this? This page contains three sections that help to achieve the goal of the page.
+        * The first is a basic description of the model that was chosen, it describes other methods that were evaluated and the result of the best model which impacted our decision.
+        * The second section is a simple bar chart that shows the features that were used to train the model based on their imporatance.
+        * Finally we have the results of the model on our train and test sets. This section conatins 4 different scores for each set and a plot for both sets in order to help visualise the results more clearly.
+
 ___
 ## Testing
+* 
+
 ### Known Bugs
+* 
 ___
 ## Future Additions
+* 
 ___
 ## Deployment
+* 
 ___
 ## Credits and Acknowledgments
+* 
 ___
