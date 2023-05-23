@@ -317,6 +317,38 @@ ___
 6. Use git push heroku main to deploy the application to Heroku or naviagte to the Deploy tab in the heroku dashboard and manually deploy.
 
 ___
+## Packages and Technologies utilised.
+* Technology that was utilised:
+    * GitHub
+    * GitPod
+    * Heroku
+    * Code Institute functions as defined in accompanying lessons.
+* Languages used:
+    * Python
+    * Markdown
+* Packages used: 
+    * Numpy
+    * Pandas
+    * MatPlotLib
+    * Plotly
+    * seaborn
+    * Pandas Profiling
+    * PPS score
+    * StreamLit
+    * Feature Engine
+    * Scikit Learn
+    * xgboost
+    * yellowbrick
+    * Jinja2
+    * MarkupSafe
+    * Protobuf
+    * ipywidgets
+___
 ## Credits and Acknowledgments
-* 
+* The Streamlit Docs were visited frequently when setting up the dashboard. They can be found [here](https://docs.streamlit.io/)
+* StackOverflow was visited several times for assistance and understanding.
+* The Predictive Analytics lessons and walkthrough projects were frequently refered back to throughout the whole development of this project.
+* [https://github.com/Vasi012/PP5-Predictive-Analysis](https://github.com/Vasi012/PP5-Predictive-Analysis) was used as a reference throughout the project.
+* I would also like to give a huge thank you to Marcel Mulders for their amazing support during this project.
+
 ___
