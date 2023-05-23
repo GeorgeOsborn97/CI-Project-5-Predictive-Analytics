@@ -245,6 +245,7 @@ ___
         * The Business Requirements.
         * The Data.
     * Each of these sections has a clear definition that tells the reader only what they need to know. The first two sections help outline the purpose / goal of the dashboard itself, whilst the final section is there to introduce the reader the data set so that they may gain a better understanding of it which will help them to understand teh content of future pages.
+![page 1](/static/images/page_1.png)
 
 2. Page 2: Housing Sales Price Study.
     * Whats the purpose? Answering the first business requirement.
@@ -258,7 +259,9 @@ ___
     * The second section introduces the dataset, where as the previous secition described the variables, the reader now has chance to look through the actual data and gain a better understanding of it.
     * The third section introduces the reader to the studies that were performed, not much detail is provided however a link is provieded if they wish to do further study on how these correlations are calculated and what they show.
     * The forth section shows the result of an intial investigation into the correlation, it shows the 6 variable sthat were isolated as the most correlated with sales price.
-    * Finally the fith section is the visualisation taht was required in the requiremnt. each correlation plot contains a scatter and box plot that can be investigated utilising plotly. 
+    * Finally the fith section is the visualisation that was required in the requiremnt. each correlation plot contains a scatter and box plot that can be investigated utilising plotly. 
+![page 2](/static/images/page_2.png)
+![page 2b](/static/images/page_2b.png)
 
 3. Page 3: Sales Price Predictor.
     * Whats the purpose? Answering the second business requirement.
@@ -266,11 +269,14 @@ ___
         * The first section again is self explanitory, it is simply there to remind the reader of the second requiremnt that will be being answered on the page.
         * The second section answers the first part of the requirement, the client in this respevct can go down the tick boxes and check the predicted sales price for each of her inherited houses.
         * The third section answers the second part of the requirement. The 6 key features are presented and are able to be adjusted to represent deifferent potential houses in order to get a prospective sales price for any house in Armes Iowa.
+![page 3](/static/images/page_3.png)
+![page 3b](/static/images/page_3b.png)
 
 4. Page 4: Project Hypothesis and Validation.
     * Whats the purpose? Provide the reader with an insight into the assumptions made in regards to the business problem, allowing them to understand our thought process and how it influenced the work done when we attempted to validate these assumptions.
     * How does it achieve this? This page contains 2 sections but they may be considered as a single section.
         * This page simply outlines the assumptions made after the initial analysis of the data, it then goes on to say how these assumptions will be validated.
+![page 4](/static/images/page_4.png)
 
 5. Page 5: ML: Housing Sales Price Prediction.
     * Whats the purpose? Provide a more in depth look at how the model is able to predict on sales price. For the more computer savy reader they should be able to understand the methodology and the results.
@@ -278,10 +284,13 @@ ___
         * The first is a basic description of the model that was chosen, it describes other methods that were evaluated and the result of the best model which impacted our decision.
         * The second section is a simple bar chart that shows the features that were used to train the model based on their imporatance.
         * Finally we have the results of the model on our train and test sets. This section conatins 4 different scores for each set and a plot for both sets in order to help visualise the results more clearly.
+![page 5](/static/images/page_5.png)
+![page 5](/static/images/page_5b.png)
 
 ___
 ## Testing
 * 
+
 
 ### Known Bugs
 * 
