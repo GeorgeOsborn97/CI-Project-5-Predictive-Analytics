@@ -30,6 +30,9 @@ def sales_price_study_page_body():
     )
 
     # inspect the data
+    st.warning(
+        f"If you wish to examine the first 10 rows in the raw dataset. Please click to button below:"
+    )
 
     if st.checkbox("Inspect the raw dataset"):
         st.write(
@@ -68,12 +71,12 @@ def sales_price_study_page_body():
         st.info(
             f"* Each plot contains a scatter graph as well as an accompaning box plot.\n"
             f"* The scatter graph shows the trend the center of which is highlited by the red trendline.\n"
-            F"* The box plots are presnt to show a clear visual indication where the majority of the data sits along with the median."
+            F"* The box plots are present to show a clear visual indication where the majority of the data sits along with the median."
             f" as well as any data points which may be considered outliers."
         )
         st.success(
             f"* These plots are made using Plotly as such they are fully responsive.\n"
-            f"* you can find teh Plotly documentation [here](https://plotly.com/python/) "
+            f"* you can find the Plotly documentation [here](https://plotly.com/python/) "
             f"if you want to know more."
         )
 

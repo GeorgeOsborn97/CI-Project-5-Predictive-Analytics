@@ -31,17 +31,15 @@ def sales_price_predictor_page_body():
     st.write("### Sales Price Prediction")
     st.info(
         f"* Here we are looking to solve the second business requirement.\n"
-        f"* To reiterate the requirement is as follows:"
-    )
-    st.info(
-        f"* Lydia desires to be able to predict the sales price"
+        f"* To reiterate the requirement is as follows:\n"
+        f"    * Lydia desires to be able to predict the sales price"
         f" of her 4 inherited houses,"
         f" as well as any other house in Ames, Iowa, that she will consider to"
         f" buy or sell in the future."
     )
 
     st.success(
-        "##### Below is the results of the work done in order to answer the above business requirement:"
+        "* Below is the results of the work done in order to answer the above business requirement:"
     )
 ##################
     total_price = predict_inherited_house_price(prediction_pipeline, price_features)
