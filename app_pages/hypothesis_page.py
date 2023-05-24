@@ -20,9 +20,9 @@ def hypothesis_page_body():
     st.info(
         f"1. A house with a 'Larger' surface area will have a higher Sales Price.\n"
         f"2. A house with better Overall Quality will have a higher Sales Price.\n"
-        f"3. A more recently built house house of equivalint square footage and quality then an older house will have a a higher Sales Price.\n"
+        f"3. A more recently built house of equivalint square footage and quality compared to an older house will have a a higher Sales Price.\n"
         f"4. A house with a more recent re model date will have a higher Sales Price.\n"
-        f"    * Additionally a recent remodel of an older house will have a higher Sales Price of an equivelent square footage and quality"
+        f"    * Additionally a recent remodel of an older house will have a higher Sales Price when compared to an equivelent square footage and quality"
         f" house that was built in the same time as the remodel, and has not undergone any remodelling.\n"
     )
 
@@ -30,7 +30,7 @@ def hypothesis_page_body():
 
     st.info(
         f"* Correlation studies utilising Pearson and Spearmen tests "
-        f"can be used in order to test all our above hypothesis. "
+        f"can be used in order to test all of our above hypothesis. "
         f"PPS (Predictive Power Score), may also be used to test the relationships between "
         f"the features in our data and test the hypothesis presented above."
     )
