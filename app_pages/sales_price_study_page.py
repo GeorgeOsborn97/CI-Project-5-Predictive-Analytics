@@ -65,13 +65,13 @@ def sales_price_study_page_body():
 
     if st.checkbox("View the correlation plot"):
         st.info(
-            f"* Below you will 6 plots that refer to each of the traget varibales defined above.\n"
+            f"* Below you will 6 plots that refer to each of the target variables defined above.\n"
             f"* If you remember these varibales are the ones that showed the greatest correlation with SalesPrice"
         )
         st.info(
             f"* Each plot contains a scatter graph as well as an accompaning box plot.\n"
-            f"* The scatter graph shows the trend the center of which is highlited by the red trendline.\n"
-            F"* The box plots are present to show a clear visual indication where the majority of the data sits along with the median."
+            f"* The scatter graph shows the trend, the center of which is highlighted by the red trendline.\n"
+            F"* The box plots show a clear visual indication of where the majority of the data sits along with the median."
             f" as well as any data points which may be considered outliers."
         )
         st.success(
