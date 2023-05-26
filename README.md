@@ -287,6 +287,19 @@ ___
 ![page 5](/static/images/page_5.png)
 ![page 5](/static/images/page_5b.png)
 
+### Additional pages post deployment.
+* With some additional time before the deadline for this project I thought it would be a good addition to book end the project with a generalised introduction based around what a user may expect from the dashbaord, as well as a simple yet thorough conclusion the wraps up the dashboard in a concise manner.
+
+1. Page 1a: Introduction.
+    * Whats the purpose? Introduce the reader / user to dashbaord and provide them with knowledge of what they can expect to gain from it.
+    * How does it achieve this? The small paragraph that makes up this page sets out the 'journey' that the user will go on as they progress through the dashboard. It's simple syntax means that even those that are not well versed in Machine Learning or computer science should be able to digest and understand what the dashboard is here to do.
+
+2. Page 7: Conclusion.
+    * Whats the purpose? Summerise what the user has learnt as they progressed through the dashbaord.
+    * How does it achieve this? This page contains three sections that help to achieve the goal of the page.
+        * The first section simply reminds teh user of the business requirements that were set in the beginning of the project.
+        * The second section breaks down how each of those business requirements have been fulfilled.
+        * Finally we have a paragraph that conclused what the user has learnt and what the dashboard has achieved in a broader assessment.
 ___
 ## Testing
 * As the dashboard is being produced by streamlit we only need to conduct basic testing on our features to ensure everything is working as expected.
