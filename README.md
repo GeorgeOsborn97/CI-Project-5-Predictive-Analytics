@@ -320,7 +320,9 @@ ___
 * No known bugs exist in the dashboard.
 ___
 ## Future Additions
-* 
+* There are several additional avenues that this project could be taken down to expand it's potentail. Given more time these are the routes that I feel would add significant positive impact to the dashboard.
+    * Review the correlation coeffeciants of the identified key features in order to review which has the greatest impact on Sales price. Cross reference this with the average cost of improving the key feature in order to see which of the key features is most cost effective when looking to gain the biggest return in investment.
+    * Another obvious avenue to be explored would be to expand the locations to which the model is applied. If new datasets were sourced that contained property records in a new area we can start to predict their sales price to.  
 ___
 ## Deployment
 * The deployment for this project was hindered by a mistake in the requirements.txt file, A wrong streamlit version was originally installed and when it came to deploying the dashboard this caused some errors. This was resolved in changing the requirements by uninstalling all packages and reisntalling only those that were required and of the correct verion. A note of this can be found in the commits in the repo. Below is a simple step guide to how the project was deployed to heroku. 
