@@ -26,11 +26,11 @@ def summary_body_page():
     st.write("#### The Business Requirements")
     st.info(
         f"The project has 2 business requirements:\n"
-        f"1 - Lydia is interested in discovering what features of a house "
+        f"* Lydia is interested in discovering what features of a house "
         f"correlate with the sales price.\n"
-        f"  * Lydia desires a visualization of the correlated "
+        f"    * Lydia desires a visualization of the correlated "
         f"variables against the sale price and a summary of what these visalizations mean.\n"
-        f"2 - Lydia desires to be able to predict the sales price "
+        f"* Lydia desires to be able to predict the sales price "
         f"of her 4 inherited houses, "
         f"as well as any other house in Ames, Iowa, that she will consider to "
         f"buy or sell in the future. The criteria for this is trained model with an R2 Score equal to or greater than 0.75."
