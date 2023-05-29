@@ -293,6 +293,7 @@ ___
 1. Page 1a: Introduction.
     * Whats the purpose? Introduce the reader / user to dashboard and provide them with knowledge of what they can expect to gain from it.
     * How does it achieve this? The small paragraph that makes up this page sets out the 'journey' that the user will go on as they progress through the dashboard. It's simple syntax means that even those that are not well versed in Machine Learning or computer science should be able to digest and understand what the dashboard is here to do.
+![page 1a](/static/images/intro.jpg)
 
 2. Page 7: Conclusion.
     * Whats the purpose? Summerise what the user has learnt as they progressed through the dashbaord.
@@ -300,6 +301,7 @@ ___
         * The first section simply reminds the user of the business requirements that were set in the beginning of the project.
         * The second section breaks down how each of those business requirements have been fulfilled.
         * Finally we have a paragraph that concluded what the user has learnt and what the dashboard has achieved in a broader assessment.
+![page 7](/static/images/conclusion.jpg)
 ___
 ## Testing
 * As the dashboard is being produced by streamlit we only need to conduct basic testing on our features to ensure everything is working as expected.
