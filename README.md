@@ -180,6 +180,15 @@ ___
 * Alongside the Crisp-DM workflow that was followed through out this project I aslo kept the principles of Agile Development in order to help maximise my time and work as effciently as possible. The Kanban board which was made in GitHub Projects was pivitol in guuiding the development of this project.
 * A link to the GitHub project can be seen [here](https://github.com/users/GeorgeOsborn97/projects/5/views/1)
 ![kanban](/static/images/kanban.png)
+* The Kanban allowed a clear seperation of jobs taht meant we did not have to splot focus over multiple jobs at once, furthermore it meant we can be sure that each job is 100% complete before we move on to the next, This is achieved by having clear acceptance criteria as defined below. The flow of the board is simple. When an Issue is defined it is placed in the 'To Do' column, when we begin to work on the tasks associated with it, it is moved to the 'In Progress' and finally when all acceptance criteria is met it is moved to the 'Done' column. You may see this process below.
+
+|From 'To Do'|To 'In Prrogress'|All Issues 'Done'|
+|---|---|---|
+|![kanban](/static/images/progress.jpg)|![kanban](/static/images/more_progress.jpg)|![kanban](/static/images/kanban.png)|
+
+* The Kanban is made up of 'Issues', each issue represents a step in the development process. They all follow the same template,the top sentence describes what feature needs implementing and the reason as to why. The second section describes the Acceptance Criteria, which tells us what needs to be done in order to mark the Issue as complete. Finally there is the Tasks, this section describes the jobs that need completing in order to complete the acceptance criteria. 
+* Each issue is also asigned a label that shows its importance, Priority 1 through 5 which tells us if it is a must have fearture (Priority 1) or something we should only try to include if we finish everything else (Priority 5). 
+![issues](/static/images/issues.jpg)
 
 ___
 ## Answering Business Requirement 1
