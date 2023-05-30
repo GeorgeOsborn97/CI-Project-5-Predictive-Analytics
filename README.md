@@ -182,7 +182,7 @@ ___
 ![kanban](/static/images/kanban.png)
 * The Kanban allowed a clear separation of jobs that meant we did not have to split focus over multiple jobs at once, furthermore it meant we can be sure that each job is 100% complete before we move on to the next, This is achieved by having clear acceptance criteria as defined below. The flow of the board is simple. When an Issue is defined it is placed in the 'To Do' column, when we begin to work on the tasks associated with it, it is moved to the 'In Progress' and finally when all acceptance criteria is met it is moved to the 'Done' column. You may see this process below.
 
-|From 'To Do'|To 'In Prrogress'|All Issues 'Done'|
+|From 'To Do'|To 'In Progress'|All Issues 'Done'|
 |---|---|---|
 |![kanban](/static/images/progress.jpg)|![kanban](/static/images/more_progress.jpg)|![kanban](/static/images/kanban.png)|
 
